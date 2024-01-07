@@ -8,7 +8,7 @@ const app = express();
 const connectWithRetry = () => {
   mongoose
     .connect(
-      "mongodb+srv://abas:abas123@hrm.oinzw.mongodb.net/?retryWrites=true&w=majority",
+      "mongodb+srv://amarajalel11:9COH1Flpgauz5RHz@cluster0.brrvlkk.mongodb.net/?retryWrites=true&w=majority",
       {
         useNewUrlparser: true,
         useUnifiedTopology: true,
