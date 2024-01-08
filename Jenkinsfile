@@ -23,16 +23,16 @@ pipeline {
             
             steps {
                 dir('client') {
-                    sh 'sudo docker build -t $DOCKERHUB_CREDENTIALS_USR/client:$BUILD_ID .'
-                    sh 'sudo docker push $DOCKERHUB_CREDENTIALS_USR/client:$BUILD_ID'
-                    sh 'sudo docker rmi $DOCKERHUB_CREDENTIALS_USR/client:$BUILD_ID'
+                    sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/client:$BUILD_ID .'
+                    sh 'docker push $DOCKERHUB_CREDENTIALS_USR/client:$BUILD_ID'
+                    sh 'docker rmi $DOCKERHUB_CREDENTIALS_USR/client:$BUILD_ID'
                 }
             }
         }
 
         stage('logout') {
             steps {
-                sh 'sudo docker logout'
+                sh 'docker logout'
             }
         }
     }
